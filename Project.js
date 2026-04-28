@@ -2,7 +2,7 @@
 
 //You are building a system that analyzes student marks stored in an array.
 
-const mark = [90,60,78,50,54];
+const mark = [90,60,78,50,44];
 
 let totalmark = 0;
 
@@ -52,7 +52,7 @@ function HighestMark() {
             }
             
               biggestNum =  HighestMark()
-              console.log("Bigggest Number : ",biggestNum);
+              console.log("Highest mark : ",biggestNum);
 
 
 //Function: Find Highest Mark:
@@ -79,7 +79,7 @@ function lowestMark() {
 }
 
 SmallestNumber = lowestMark();
-console.log("Smallest Number : ",SmallestNumber);
+console.log("lowest mark : ",SmallestNumber);
 
     
 function MarkCount(count){ 
@@ -97,41 +97,43 @@ function MarkCount(count){
                  count = count + 1;
                }    
             }
-     return count;
+            return count;
         }
     
  console.log("Pass Count :",MarkCount(0));
 
  const AssignGrade = (Onemark) =>{
-       let grade;
-    if(mark.length === 0){
-        console.log("Empty array");
-        return;
-    }
-
+    
+       let grade = "invalid Grade!";
     for(let i=0; i<mark.length; i++){
-        if(mark[i]<0 || mark[i]>100){
-                console.log("Invalid Input");
-                continue;
-            }
-            if(Onemark>=90 && Onemark<=100){
+
+  
+           if(Onemark>=90 && Onemark<=100){
                grade = "A";
+            
+            
             }
             else if(Onemark>=75 && Onemark<=85){
                 grade = "B";
+             
+                
             }
             else if(Onemark>=50 && Onemark<=74){
                 grade = "C";
+              
+             
             }
-            else{
+            else if(Onemark<50){
                 grade = "F";
-            }
+
+            }                
+         
     }
     return grade;
+}
 
- }
- grade = AssignGrade(mark[0]);
+ grade = AssignGrade(mark[3]);
 
- console.log("Grade : ",grade);
+ console.log("Grade:",grade);
 
  
