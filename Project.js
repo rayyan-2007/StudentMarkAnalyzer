@@ -30,7 +30,6 @@ let Avgofall = CalculateAverage();
 
 console.log("Average mark : ",Avgofall)
 
-  
 function HighestMark() {
     let biggestNum = [0];
     if(mark.length===0){
@@ -71,8 +70,7 @@ function lowestMark() {
     }
      else if(mark[i]<SmallestNumber){
         SmallestNumber = mark[i];
-     }
-       
+     }   
 }
 
  return SmallestNumber;
@@ -80,7 +78,6 @@ function lowestMark() {
 
 SmallestNumber = lowestMark();
 console.log("lowest mark : ",SmallestNumber);
-
     
 function MarkCount(count){ 
     let check = mark[0];
